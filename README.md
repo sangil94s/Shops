@@ -28,3 +28,4 @@
 - Doc : README 수정 시
 - Test : Test 코드 작성 시 
 - Refactor : 리팩토링 시 
+- Remove : 기존 코드 제거 시

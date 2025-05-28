@@ -1,0 +1,12 @@
+#!/usr/bin/env sh
+. "$(dirname "$0")/h"
+commit_msg=$(cat "$1")
+if echo "$commit_msg" | grep -Eiq '^(add|modify|refactor|fix|remove|doc|test|setting)(:|\s)'; then
+  echo "커밋 메시지 통과!"
+  exit 0
+else
+  echo "커밋 메시지는 다음 키워드 중 하나로 시작해야 합니다:"
+  echo "   Add, Modify, Refactor, Fix, Remove, Doc, Test, Setting"
+  echo "   예: 'Add: 새로운 기능 추가' 또는 'Fix 로그인 오류'"
+  exit 1
+fi
