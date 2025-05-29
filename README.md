@@ -30,3 +30,5 @@
 - Test : Test 코드 작성 시
 - Refactor : 리팩토링 시
 - Remove : 기존 코드 제거 시
+
+[Favicon 출처](https://www.flaticon.com/kr/free-icon/front-store_61125?related_id=61125&origin=pack)
