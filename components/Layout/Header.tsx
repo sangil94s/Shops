@@ -9,7 +9,6 @@ import {
   DropdownMenuTrigger,
 } from '../ui/dropdown-menu';
 import Link from 'next/link';
-
 export default function Headers() {
   return (
     <>
@@ -18,7 +17,7 @@ export default function Headers() {
           Logo
         </Link>
 
-        <section>
+        <section className="flex">
           <DropdownMenu>
             <DropdownMenuTrigger>
               <AlignJustify className="m-1 cursor-pointer" />
