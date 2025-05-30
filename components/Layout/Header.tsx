@@ -4,8 +4,6 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from '../ui/dropdown-menu';
 import Link from 'next/link';
@@ -23,12 +21,9 @@ export default function Headers() {
               <AlignJustify className="m-1 cursor-pointer" />
             </DropdownMenuTrigger>
             <DropdownMenuContent>
-              <DropdownMenuLabel>My Account</DropdownMenuLabel>
-              <DropdownMenuSeparator />
-              <DropdownMenuItem>Profile</DropdownMenuItem>
-              <DropdownMenuItem>Billing</DropdownMenuItem>
-              <DropdownMenuItem>Team</DropdownMenuItem>
-              <DropdownMenuItem>Subscription</DropdownMenuItem>
+              <DropdownMenuItem className="cursor-pointer">마이 페이지</DropdownMenuItem>
+              <DropdownMenuItem className="cursor-pointer">로그인</DropdownMenuItem>
+              <DropdownMenuItem className="cursor-pointer">로그아웃</DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
         </section>

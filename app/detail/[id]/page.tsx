@@ -1,3 +1,4 @@
+import ProductDetail from '@/components/ProductDetail/ProductDetail';
 import type { Metadata } from 'next';
 
 export const metadata = {
@@ -7,7 +8,9 @@ export const metadata = {
 export default function page() {
   return (
     <>
-      <p>상세 페이지</p>
+      <h1 className="py-2 text-center text-xl font-bold">상세 페이지</h1>
+
+      <ProductDetail />
     </>
   );
 }
