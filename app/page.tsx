@@ -12,7 +12,7 @@ export default function Home() {
         <ProductCard />
         <ProductCard />
       </div>
-      <Button className="m-1">
+      <Button className="m-1 cursor-pointer">
         <SquarePlus />
         관리자 한정 - 상품 추가
       </Button>

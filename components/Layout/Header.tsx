@@ -8,12 +8,15 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from '../ui/dropdown-menu';
+import Link from 'next/link';
 
 export default function Headers() {
   return (
     <>
       <header className="my-1 flex h-10 w-full flex-row justify-between border-b-2 border-slate-300">
-        <h1 className="cursor-pointer p-1 text-xl font-bold">Logo</h1>
+        <Link href="/" className="p-1 text-xl font-bold">
+          Logo
+        </Link>
 
         <section>
           <DropdownMenu>
