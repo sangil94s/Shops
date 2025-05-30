@@ -1,0 +1,36 @@
+// Header
+import { AlignJustify } from 'lucide-react';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from '../ui/dropdown-menu';
+
+export default function Headers() {
+  return (
+    <>
+      <header className="my-1 flex h-10 w-full flex-row justify-between border-b-2 border-slate-300">
+        <h1 className="cursor-pointer p-1 text-xl font-bold">Logo</h1>
+
+        <section>
+          <DropdownMenu>
+            <DropdownMenuTrigger>
+              <AlignJustify className="m-1 cursor-pointer" />
+            </DropdownMenuTrigger>
+            <DropdownMenuContent>
+              <DropdownMenuLabel>My Account</DropdownMenuLabel>
+              <DropdownMenuSeparator />
+              <DropdownMenuItem>Profile</DropdownMenuItem>
+              <DropdownMenuItem>Billing</DropdownMenuItem>
+              <DropdownMenuItem>Team</DropdownMenuItem>
+              <DropdownMenuItem>Subscription</DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
+        </section>
+      </header>
+    </>
+  );
+}
