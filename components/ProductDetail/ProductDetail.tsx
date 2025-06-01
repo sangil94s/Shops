@@ -3,8 +3,8 @@
 export default function ProductDetail() {
   return (
     <>
-      <div className="m-auto flex h-max w-11/12 flex-row items-center justify-center">
-        <section className="mx-1 w-full rounded-md border border-slate-300">
+      <div className="m-auto flex h-max w-11/12 flex-col items-center justify-center lg:flex-row">
+        <section className="m-1 w-full rounded-md border border-slate-300">
           <h1>이미지 배치 지역</h1>
         </section>
 
