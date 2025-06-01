@@ -12,7 +12,7 @@ import {
 export default function ProductCard() {
   return (
     <>
-      <Card className="mx-2 transition-transform duration-200 ease-in-out hover:scale-105">
+      <Card className="m-1 transition-transform duration-200 ease-in-out hover:scale-105">
         <CardHeader>
           <CardTitle>Card Title</CardTitle>
           <CardDescription>Card Description</CardDescription>

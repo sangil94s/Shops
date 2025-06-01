@@ -15,7 +15,7 @@ export default function DarkMode() {
 
   if (!isMounted) return null;
   return (
-    <div className="absolute right-5 bottom-5 rounded-xl bg-white">
+    <div className="fixed right-5 bottom-5 rounded-xl bg-white">
       <Switch
         className="my-2 cursor-pointer"
         checked={theme === 'dark'}

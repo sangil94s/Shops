@@ -13,15 +13,9 @@ export default function LoginForm() {
             <CardTitle className="text-center text-2xl font-bold">로그인 페이지</CardTitle>
           </CardHeader>
           <CardContent>
-            <label htmlFor="id" className="py-2">
-              User ID
-            </label>
             <Input id="id" name="id" type="text" placeholder="ID를 입력해주세요" required />
             <p className="py-2 text-center font-bold text-red-600">ID 입력 누락시 나오는 텍스트</p>
 
-            <label htmlFor="password" className="py-2">
-              Password
-            </label>
             <Input
               id="password"
               name="password"

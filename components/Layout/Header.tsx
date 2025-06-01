@@ -11,11 +11,11 @@ export default function Headers() {
   return (
     <>
       <header className="my-1 flex h-10 w-full flex-row justify-between border-b-2 border-slate-300">
-        <Link href="/" className="p-1 text-xl font-bold">
+        <Link href="/" className="p-2 text-xl font-bold">
           Logo
         </Link>
 
-        <section className="flex">
+        <section>
           <DropdownMenu>
             <DropdownMenuTrigger>
               <AlignJustify className="m-1 cursor-pointer" />
