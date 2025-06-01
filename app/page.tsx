@@ -1,8 +1,6 @@
+import ProductAddModal from '@/components/Admin/ADD/ProductAddModal';
 import MainCarousel from '@/components/ETC/MainCarousel';
 import ProductCard from '@/components/Product/Card/ProductCard';
-import { Button } from '@/components/ui/button';
-import { SquarePlus } from 'lucide-react';
-
 export default function Home() {
   return (
     <>
@@ -13,10 +11,7 @@ export default function Home() {
         <ProductCard />
         <ProductCard />
       </div>
-      <Button className="m-1 cursor-pointer">
-        <SquarePlus />
-        관리자 한정 - 상품 추가
-      </Button>
+      <ProductAddModal />
     </>
   );
 }
