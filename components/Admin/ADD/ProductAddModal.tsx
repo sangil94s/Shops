@@ -6,16 +6,13 @@ import {
   DialogTitle,
   DialogTrigger,
 } from '@/components/ui/dialog';
-import { SquarePlus } from 'lucide-react';
 
 // 관리자 전용 - 상품 추가 모달 초안
 
 export default function ProductAddModal() {
   return (
     <Dialog>
-      <DialogTrigger>
-        <SquarePlus /> 상품 추가
-      </DialogTrigger>
+      <DialogTrigger className="mx-1 font-bold">상품 추가</DialogTrigger>
       <DialogContent>
         <DialogHeader>
           <DialogTitle>Are you absolutely sure?</DialogTitle>

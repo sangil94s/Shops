@@ -11,7 +11,7 @@ export default function Headers() {
   return (
     <>
       <header className="my-1 flex h-10 w-full flex-row justify-between border-b-2 border-slate-300">
-        <Link href="/" className="p-2 text-xl font-bold">
+        <Link href="/" className="p-1 text-xl font-bold">
           Logo
         </Link>
 
@@ -22,6 +22,8 @@ export default function Headers() {
             </DropdownMenuTrigger>
             <DropdownMenuContent>
               <DropdownMenuItem className="cursor-pointer">마이 페이지</DropdownMenuItem>
+              <DropdownMenuItem className="cursor-pointer">장바구니</DropdownMenuItem>
+              <DropdownMenuItem className="cursor-pointer">FAQ</DropdownMenuItem>
               <DropdownMenuItem className="cursor-pointer">로그인</DropdownMenuItem>
               <DropdownMenuItem className="cursor-pointer">로그아웃</DropdownMenuItem>
             </DropdownMenuContent>
