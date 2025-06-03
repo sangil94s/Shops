@@ -12,7 +12,7 @@ import {
 export default function ProductAddModal() {
   return (
     <Dialog>
-      <DialogTrigger className="mx-1 font-bold">상품 추가</DialogTrigger>
+      <DialogTrigger className="mx-1 cursor-pointer font-bold">상품 추가</DialogTrigger>
       <DialogContent>
         <DialogHeader>
           <DialogTitle>Are you absolutely sure?</DialogTitle>

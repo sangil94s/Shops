@@ -1,11 +1,11 @@
-// 로그인 컴포넌트
+// 회원가입 목적
 'use client';
 import { useRouter } from 'next/navigation';
 import { Button } from '../ui/button';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '../ui/card';
 import { Input } from '../ui/input';
 
-export default function LoginForm() {
+export default function SignUpForm() {
   const router = useRouter();
 
   const tempDev = () => {
@@ -16,7 +16,9 @@ export default function LoginForm() {
       <div className="flex min-h-screen items-center justify-center">
         <Card className="w-full max-w-md">
           <CardHeader>
-            <CardTitle className="text-center text-2xl font-bold">로그인 페이지</CardTitle>
+            <CardTitle className="text-center text-2xl font-bold">
+              회원가입 페이지 - 수정 예정
+            </CardTitle>
           </CardHeader>
           <CardContent>
             <Input id="id" name="id" type="text" placeholder="ID를 입력해주세요" required />
@@ -35,14 +37,14 @@ export default function LoginForm() {
           </CardContent>
           <CardFooter>
             <Button type="submit" className="w-full font-bold" onClick={() => tempDev()}>
-              로그인
+              회원가입
             </Button>
           </CardFooter>
           <h4
             className="cursor-pointer py-2 text-center font-bold text-red-600"
-            onClick={() => router.push('/signup')}
+            onClick={() => router.push('/login')}
           >
-            회원이 아닌가요?
+            이미 회원인가요?
           </h4>
         </Card>
       </div>
