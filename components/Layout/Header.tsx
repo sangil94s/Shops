@@ -1,6 +1,6 @@
 // Header
 'use client';
-import { AlignJustify } from 'lucide-react';
+import { AlignJustify, ShoppingBasket, Headset, LogIn, LogOut, NotepadText } from 'lucide-react';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -30,19 +30,19 @@ export default function Headers() {
             </DropdownMenuTrigger>
             <DropdownMenuContent>
               <DropdownMenuItem className="cursor-pointer" onClick={() => tempAlert()}>
-                마이 페이지
+                <NotepadText /> 마이 페이지
               </DropdownMenuItem>
               <DropdownMenuItem className="cursor-pointer" onClick={() => tempAlert()}>
-                장바구니
+                <ShoppingBasket /> 장바구니
               </DropdownMenuItem>
               <DropdownMenuItem className="cursor-pointer" onClick={() => router.push('/faq')}>
-                FAQ
+                <Headset /> FAQ
               </DropdownMenuItem>
               <DropdownMenuItem className="cursor-pointer" onClick={() => router.push('/login')}>
-                로그인
+                <LogIn /> 로그인
               </DropdownMenuItem>
               <DropdownMenuItem className="cursor-pointer" onClick={() => tempAlert()}>
-                로그아웃
+                <LogOut /> 로그아웃
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
