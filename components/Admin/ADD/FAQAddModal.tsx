@@ -12,7 +12,7 @@ import {
 export default function FAQAddModal() {
   return (
     <Dialog>
-      <DialogTrigger className="mx-1 font-bold">FAQ 추가</DialogTrigger>
+      <DialogTrigger className="mx-1 cursor-pointer font-bold">FAQ 추가</DialogTrigger>
       <DialogContent>
         <DialogHeader>
           <DialogTitle>Are you absolutely sure?</DialogTitle>
