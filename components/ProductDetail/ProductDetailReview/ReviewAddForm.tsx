@@ -7,7 +7,7 @@ import { Input } from '@/components/ui/input';
 export default function ReviewAddForm() {
   return (
     <>
-      <Card className='my-2'>
+      <Card className="my-2">
         <CardHeader>
           <CardTitle className="text-center text-xl font-bold">리뷰 작성하기</CardTitle>
         </CardHeader>
