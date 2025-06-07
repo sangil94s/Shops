@@ -1,11 +1,6 @@
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Card, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import Image from 'next/image';
 import Link from 'next/link';
 
 // 상품 카드
@@ -16,15 +11,19 @@ export default function ProductCard() {
       <Link href={`/detail/${1}`}>
         <Card className="m-1 transition-transform duration-200 ease-in-out hover:scale-105">
           <CardHeader>
-            <CardTitle>Card Title</CardTitle>
-            <CardDescription>Card Description</CardDescription>
+            <Image
+              src={'/image81.png'}
+              width={300}
+              height={300}
+              alt="대표적 상품 이미지"
+              className="m-auto rounded-md"
+            />
+            <CardTitle className="p-2 text-center text-xl">상품 명 배치 부분</CardTitle>
+            <Badge variant="secondary" className="m-auto bg-blue-500 text-white dark:bg-blue-600">
+              상품 카테고리
+            </Badge>
+            <CardDescription className="py-2 text-center">상품 가격 배치 부분</CardDescription>
           </CardHeader>
-          <CardContent>
-            <p>Card Content</p>
-          </CardContent>
-          <CardFooter>
-            <p>Card Footer</p>
-          </CardFooter>
         </Card>
       </Link>
     </>

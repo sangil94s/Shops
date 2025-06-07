@@ -8,11 +8,11 @@ export default function Home() {
   return (
     <>
       <MainCarousel />
-      <div className="flex flex-row gap-2">
+      <div className="flex flex-row items-center justify-center gap-2">
         <ProductFilter />
         <ProductSort />
       </div>
-      <div className="grid w-full grid-rows-1 lg:grid-cols-4">
+      <div className="m-auto grid w-8/12 grid-rows-1 gap-2 lg:w-6/12 lg:grid-cols-4">
         <ProductCard />
         <ProductCard />
         <ProductCard />
