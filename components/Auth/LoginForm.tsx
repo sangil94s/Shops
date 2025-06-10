@@ -4,37 +4,67 @@ import { useRouter } from 'next/navigation';
 import { Button } from '../ui/button';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '../ui/card';
 import { Input } from '../ui/input';
+import { useForm } from 'react-hook-form';
+import axios from 'axios';
+import { useAuthStore } from '@/app/util/Zustand/useAuthStore';
+
+interface Values {
+  username: string;
+  password: string;
+}
 
 export default function LoginForm() {
   const router = useRouter();
+  const login = useAuthStore(state => state.login);
 
-  const tempDev = () => {
-    alert('개발예정입니다.');
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<Values>();
+
+  const onSubmit = async (data: Values) => {
+    try {
+      const res = await axios.post('https://shops-be.onrender.com/users/login', data);
+      const { accessToken, user } = res.data;
+
+      login({ accessToken, user });
+      alert('로그인 완료');
+      router.push('/');
+    } catch (err: any) {
+      console.error(err);
+      alert(err?.response?.data?.message || '로그인 실패');
+    }
   };
   return (
     <>
-      <div className="flex min-h-screen items-center justify-center">
+      <form
+        onSubmit={handleSubmit(onSubmit)}
+        className="flex min-h-screen items-center justify-center"
+      >
         <Card className="w-full max-w-md">
           <CardHeader>
             <CardTitle className="text-center text-2xl font-bold">로그인 페이지</CardTitle>
           </CardHeader>
           <CardContent>
-            <Input id="id" name="id" type="text" placeholder="ID를 입력해주세요" required />
-            <p className="py-2 text-center font-bold text-red-600">ID 입력 누락시 나오는 텍스트</p>
+            <Input
+              placeholder="아이디 을 입력하세요"
+              {...register('username', { required: '아이디는 필수입니다.' })}
+            />
+            {errors.username && (
+              <p className="text-center font-bold text-red-600">{errors.username.message}</p>
+            )}
 
             <Input
-              id="password"
-              name="password"
+              placeholder="비밀번호 을 입력하세요"
+              className="my-2"
               type="password"
-              placeholder="Password를 입력해주세요"
-              required
+              {...register('password', { required: '비밀번호는 필수입니다.' })}
             />
-            <p className="py-2 text-center font-bold text-red-600">
-              비밀번호 입력 누락시 나오는 텍스트
-            </p>
+            {errors.password && <p className="text-red-600">{errors.password.message}</p>}
           </CardContent>
           <CardFooter>
-            <Button type="submit" className="w-full font-bold" onClick={() => tempDev()}>
+            <Button type="submit" className="w-full font-bold">
               로그인
             </Button>
           </CardFooter>
@@ -45,7 +75,7 @@ export default function LoginForm() {
             회원이 아닌가요?
           </h4>
         </Card>
-      </div>
+      </form>
     </>
   );
 }

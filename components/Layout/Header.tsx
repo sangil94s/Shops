@@ -9,9 +9,18 @@ import {
 } from '../ui/dropdown-menu';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
+import { useAuthStore } from '@/app/util/Zustand/useAuthStore';
 
 export default function Headers() {
   const router = useRouter();
+  const logout = useAuthStore(state => state.logout);
+  const isAuthenticated = useAuthStore(state => state.isAuthenticated);
+
+  const handleLogout = () => {
+    logout();
+    alert('로그아웃 되었습니다.');
+    router.push('/');
+  };
 
   const tempAlert = () => {
     alert('개발 예정입니다.');
@@ -29,21 +38,26 @@ export default function Headers() {
               <AlignJustify className="m-1 cursor-pointer" />
             </DropdownMenuTrigger>
             <DropdownMenuContent>
-              <DropdownMenuItem className="cursor-pointer" onClick={() => tempAlert()}>
-                <NotepadText /> 마이 페이지
-              </DropdownMenuItem>
+              {isAuthenticated && (
+                <DropdownMenuItem className="cursor-pointer" onClick={() => tempAlert()}>
+                  <NotepadText /> 마이 페이지
+                </DropdownMenuItem>
+              )}
               <DropdownMenuItem className="cursor-pointer" onClick={() => tempAlert()}>
                 <ShoppingBasket /> 장바구니
               </DropdownMenuItem>
               <DropdownMenuItem className="cursor-pointer" onClick={() => router.push('/faq')}>
                 <Headset /> FAQ
               </DropdownMenuItem>
-              <DropdownMenuItem className="cursor-pointer" onClick={() => router.push('/login')}>
-                <LogIn /> 로그인
-              </DropdownMenuItem>
-              <DropdownMenuItem className="cursor-pointer" onClick={() => tempAlert()}>
-                <LogOut /> 로그아웃
-              </DropdownMenuItem>
+              {!isAuthenticated ? (
+                <DropdownMenuItem className="cursor-pointer" onClick={() => router.push('/login')}>
+                  <LogIn /> 로그인
+                </DropdownMenuItem>
+              ) : (
+                <DropdownMenuItem className="cursor-pointer" onClick={handleLogout}>
+                  <LogOut /> 로그아웃
+                </DropdownMenuItem>
+              )}
             </DropdownMenuContent>
           </DropdownMenu>
         </section>
