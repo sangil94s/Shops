@@ -64,7 +64,7 @@ export default function LoginForm() {
             {errors.password && <p className="text-red-600">{errors.password.message}</p>}
           </CardContent>
           <CardFooter>
-            <Button type="submit" className="w-full font-bold">
+            <Button variant="ghost" type="submit" className="w-full cursor-pointer font-bold">
               로그인
             </Button>
           </CardFooter>

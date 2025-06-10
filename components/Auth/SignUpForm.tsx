@@ -74,7 +74,7 @@ export default function SignUpForm() {
             </select>
           </CardContent>
           <CardFooter>
-            <Button type="submit" className="w-full font-bold">
+            <Button variant="ghost" type="submit" className="w-full cursor-pointer font-bold">
               회원가입
             </Button>
           </CardFooter>
