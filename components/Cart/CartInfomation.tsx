@@ -4,7 +4,7 @@ import { Button } from '../ui/button';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '../ui/card';
 import { Separator } from '../ui/separator';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '../ui/table';
-import { Minus, Plus, Trash2, ShoppingBag, ArrowLeft, Tag } from 'lucide-react';
+import { Minus, Plus, Trash2, ShoppingBag, ArrowLeft, Tag, CircleDollarSign } from 'lucide-react';
 // 장바구니 초안
 
 export default function CartInfomation() {
@@ -130,7 +130,9 @@ export default function CartInfomation() {
                 </CardContent>
 
                 <CardFooter className="flex flex-col gap-3">
-                  <Button className="w-full">주문하기</Button>
+                  <Button variant="ghost" className="w-full">
+                    <CircleDollarSign /> 주문하기
+                  </Button>
                 </CardFooter>
               </Card>
             </div>

@@ -15,7 +15,12 @@ export default function SignUpForm() {
     register,
     handleSubmit,
     formState: { errors },
+    watch,
   } = useForm<SignUpValues>();
+  const nickname = watch('nickname', '');
+  const username = watch('username', '');
+  const password = watch('password', '');
+  const isFormValid = nickname.length > 0 && username.length > 0 && password.length > 0;
 
   const onSubmit = async (data: SignUpValues) => {
     try {
@@ -69,7 +74,11 @@ export default function SignUpForm() {
             </select>
           </CardContent>
           <CardFooter>
-            <Button variant="ghost" type="submit" className="w-full cursor-pointer font-bold">
+            <Button
+              variant="ghost"
+              type="submit"
+              className={`w-full cursor-pointer font-bold ${isFormValid ? 'text-blue-500' : 'text-transparent'}`}
+            >
               회원가입
             </Button>
           </CardFooter>

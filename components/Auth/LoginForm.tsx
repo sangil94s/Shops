@@ -17,7 +17,12 @@ export default function LoginForm() {
     register,
     handleSubmit,
     formState: { errors },
+    watch,
   } = useForm<LoginFormValues>();
+
+  const username = watch('username', '');
+  const password = watch('password', '');
+  const isFormValid = username.length > 0 && password.length > 0;
 
   const onSubmit = async (data: LoginFormValues) => {
     try {
@@ -60,7 +65,11 @@ export default function LoginForm() {
             {errors.password && <p className="text-red-600">{errors.password.message}</p>}
           </CardContent>
           <CardFooter>
-            <Button variant="ghost" type="submit" className="w-full cursor-pointer font-bold">
+            <Button
+              variant="ghost"
+              type="submit"
+              className={`w-full cursor-pointer font-bold ${isFormValid ? 'text-blue-500' : 'text-transparent'}`}
+            >
               로그인
             </Button>
           </CardFooter>
