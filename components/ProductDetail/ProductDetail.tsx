@@ -29,9 +29,11 @@ export default function ProductDetail() {
                 <SelectValue placeholder="상품 수량을 선택하세요" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="light">Light</SelectItem>
-                <SelectItem value="dark">Dark</SelectItem>
-                <SelectItem value="system">System</SelectItem>
+                <SelectItem value="1">1</SelectItem>
+                <SelectItem value="2">2</SelectItem>
+                <SelectItem value="3">3</SelectItem>
+                <SelectItem value="4">4</SelectItem>
+                <SelectItem value="5">5</SelectItem>
               </SelectContent>
             </Select>
             <Button className="m-2 w-6/12 cursor-pointer font-bold">

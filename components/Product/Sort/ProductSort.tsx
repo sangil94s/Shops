@@ -5,7 +5,7 @@ export default function ProductSort() {
   return (
     <>
       <Select>
-        <SelectTrigger className="my-2 w-5/12 lg:w-2/12">
+        <SelectTrigger className="my-2 w-5/12 cursor-pointer lg:w-2/12">
           <SelectValue placeholder="정렬 기준을 선택하세요" />
         </SelectTrigger>
         <SelectContent>

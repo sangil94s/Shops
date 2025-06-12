@@ -16,6 +16,7 @@ export default function ReviewAddForm() {
             <div>
               <label className="font-bold">리뷰 제목</label>
               <Input placeholder="리뷰 제목을 입력해주세요" className="my-2" />
+              <p className="py-2 text-center font-bold text-red-600">제목은 필수 값 입니다</p>
             </div>
 
             <div>
@@ -24,9 +25,10 @@ export default function ReviewAddForm() {
                 placeholder="상품에 대한 솔직한 후기를 남겨주세요"
                 className="my-2 h-24 w-full resize-none"
               />
+              <p className="py-2 text-center font-bold text-red-600">내용은 필수 값 입니다</p>
             </div>
 
-            <Button type="submit" className="w-full cursor-pointer font-bold">
+            <Button variant="ghost" type="submit" className="w-full cursor-pointer font-bold">
               리뷰 등록하기
             </Button>
           </form>

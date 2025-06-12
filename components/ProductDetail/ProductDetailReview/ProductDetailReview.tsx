@@ -1,4 +1,5 @@
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent } from '@/components/ui/card';
+import { Trash2 } from 'lucide-react';
 
 export default function ProductDetailReview() {
   return (
@@ -13,6 +14,7 @@ export default function ProductDetailReview() {
                   <div className="flex items-center gap-2">
                     <h4 className="font-semibold">홍길동</h4>
                     <span className="text-sm text-gray-500">2025-01-01 00:00:00</span>
+                    <Trash2 className="cursor-pointer" /> {/* 삭제 버튼용 - 관리자만 삭제 가능 */}
                   </div>
                 </div>
               </div>
