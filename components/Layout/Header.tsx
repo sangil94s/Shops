@@ -15,8 +15,8 @@ export default function Headers() {
   const router = useRouter();
   const logout = useAuthStore(state => state.logout);
   const isAuthenticated = useAuthStore(state => state.isAuthenticated);
-  const users = useAuthStore(state => state.user)
- 
+  const users = useAuthStore(state => state.user);
+
   const handleLogout = () => {
     logout();
     alert('로그아웃 되었습니다.');
@@ -41,13 +41,13 @@ export default function Headers() {
             <DropdownMenuContent>
               {isAuthenticated && (
                 <>
-                <DropdownMenuItem className="cursor-pointer" onClick={() => tempAlert()}>
-                  <NotepadText /> 마이 페이지
-                </DropdownMenuItem>
-                
-                <DropdownMenuItem className="cursor-pointer" onClick={() => tempAlert()}>
-                  <NotepadText /> 관리자 페이지
-                </DropdownMenuItem>
+                  <DropdownMenuItem className="cursor-pointer" onClick={() => tempAlert()}>
+                    <NotepadText /> 마이 페이지
+                  </DropdownMenuItem>
+
+                  <DropdownMenuItem className="cursor-pointer" onClick={() => tempAlert()}>
+                    <NotepadText /> 관리자 페이지
+                  </DropdownMenuItem>
                 </>
               )}
               <DropdownMenuItem className="cursor-pointer" onClick={() => tempAlert()}>

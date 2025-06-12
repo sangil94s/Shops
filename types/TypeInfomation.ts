@@ -7,3 +7,13 @@ export interface FAQListTypes {
   category: string;
   createDate: string;
 } // FAQ List 에서 사용합니다.
+
+export interface LoginFormValues {
+  username: string;
+  password: string;
+} // LoginForm.tsx 에서 사용합니다
+
+export interface SignUpValues extends LoginFormValues {
+  nickname: string;
+  permission: 'USER' | 'ADMIN';
+}

@@ -7,11 +7,7 @@ import { Input } from '../ui/input';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import { useAuthStore } from '@/app/util/Zustand/useAuthStore';
-
-interface Values {
-  username: string;
-  password: string;
-}
+import { LoginFormValues } from '@/types/TypeInfomation';
 
 export default function LoginForm() {
   const router = useRouter();
@@ -21,9 +17,9 @@ export default function LoginForm() {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<Values>();
+  } = useForm<LoginFormValues>();
 
-  const onSubmit = async (data: Values) => {
+  const onSubmit = async (data: LoginFormValues) => {
     try {
       const res = await axios.post('https://shops-be.onrender.com/users/login', data);
       const { accessToken, user } = res.data;

@@ -6,13 +6,8 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '../ui/card
 import { Input } from '../ui/input';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
+import { SignUpValues } from '@/types/TypeInfomation';
 
-interface Values {
-  nickname: string;
-  username: string;
-  password: string;
-  permission: 'USER' | 'ADMIN';
-}
 export default function SignUpForm() {
   const router = useRouter();
 
@@ -20,9 +15,9 @@ export default function SignUpForm() {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<Values>();
+  } = useForm<SignUpValues>();
 
-  const onSubmit = async (data: Values) => {
+  const onSubmit = async (data: SignUpValues) => {
     try {
       await axios.post('https://shops-be.onrender.com/users', data);
       alert('회원가입 완료! 로그인해주세요.');
