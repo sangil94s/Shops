@@ -53,7 +53,7 @@ export default function LoginForm() {
               {...register('username', { required: '아이디는 필수입니다.' })}
             />
             {errors.username && (
-              <p className="text-center font-bold text-red-600">{errors.username.message}</p>
+              <p className="py-2 text-center font-bold text-red-600">{errors.username.message}</p>
             )}
 
             <Input
@@ -62,7 +62,9 @@ export default function LoginForm() {
               type="password"
               {...register('password', { required: '비밀번호는 필수입니다.' })}
             />
-            {errors.password && <p className="text-red-600">{errors.password.message}</p>}
+            {errors.password && (
+              <p className="py-2 text-center font-bold text-red-600">{errors.password.message}</p>
+            )}
           </CardContent>
           <CardFooter>
             <Button

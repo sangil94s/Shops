@@ -15,15 +15,13 @@ export default function DarkMode() {
 
   if (!isMounted) return null;
   return (
-    <div className="fixed right-5 bottom-5 rounded-xl bg-white">
+    <div className="bg-accent fixed right-5 bottom-5 rounded-xl">
       <Switch
         className="my-2 cursor-pointer"
         checked={theme === 'dark'}
         onCheckedChange={values => setTheme(values ? 'dark' : 'light')}
       />
-      <span>
-        {theme === 'dark' ? <Moon className="m-auto text-black" /> : <Sun className="m-auto" />}
-      </span>
+      <span>{theme === 'dark' ? <Moon className="m-auto" /> : <Sun className="m-auto" />}</span>
     </div>
   );
 }

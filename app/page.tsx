@@ -12,7 +12,7 @@ export default function Home() {
         <ProductFilter />
         <ProductSort />
       </div>
-      <div className="m-auto grid w-10/12 grid-cols-2 gap-2 lg:w-6/12 lg:grid-cols-4">
+      <div className="m-auto grid w-10/12 grid-cols-2 gap-2 lg:w-7/12 lg:grid-cols-4">
         <ProductCard />
         <ProductCard />
         <ProductCard />

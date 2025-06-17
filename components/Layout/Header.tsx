@@ -33,7 +33,12 @@ export default function Headers() {
           Logo
         </Link>
 
-        <section>
+        <section className="flex">
+          <div>
+            {users?.nickname !== undefined && (
+              <p className="mx-4 my-1 font-bold text-blue-600">{users?.nickname}님 </p>
+            )}
+          </div>
           <DropdownMenu>
             <DropdownMenuTrigger>
               <AlignJustify className="m-1 cursor-pointer" />
@@ -48,11 +53,12 @@ export default function Headers() {
                   <DropdownMenuItem className="cursor-pointer" onClick={() => tempAlert()}>
                     <NotepadText /> 관리자 페이지
                   </DropdownMenuItem>
+                  <DropdownMenuItem className="cursor-pointer" onClick={() => tempAlert()}>
+                    <ShoppingBasket /> 장바구니
+                  </DropdownMenuItem>
                 </>
               )}
-              <DropdownMenuItem className="cursor-pointer" onClick={() => tempAlert()}>
-                <ShoppingBasket /> 장바구니
-              </DropdownMenuItem>
+
               <DropdownMenuItem className="cursor-pointer" onClick={() => router.push('/faq')}>
                 <Headset /> FAQ
               </DropdownMenuItem>

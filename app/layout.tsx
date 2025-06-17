@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 import ReactQueryProvider from './util/ReactQuery/ReactQuery';
-import Footers from '@/components/Layout/Footer';
 import Headers from '@/components/Layout/Header';
 import { ThemeProvider } from '@/components/ETC/ThemeProvider';
 import DarkMode from '@/components/Layout/DarkMode';
@@ -41,7 +40,6 @@ export default function RootLayout({
         >
           <Headers />
           <ReactQueryProvider>{children}</ReactQueryProvider>
-          <Footers />
           <DarkMode />
         </ThemeProvider>
       </body>

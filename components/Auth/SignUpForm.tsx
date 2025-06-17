@@ -50,7 +50,7 @@ export default function SignUpForm() {
               {...register('nickname', { required: '닉네임은 필수입니다.' })}
             />
             {errors.nickname && (
-              <p className="text-center font-bold text-red-600">{errors.nickname.message}</p>
+              <p className="py-2 text-center font-bold text-red-600">{errors.nickname.message}</p>
             )}
             <Input
               placeholder="아이디 을 입력하세요"
@@ -58,7 +58,7 @@ export default function SignUpForm() {
               {...register('username', { required: '아이디는 필수입니다.' })}
             />
             {errors.username && (
-              <p className="text-center font-bold text-red-600">{errors.username.message}</p>
+              <p className="py-2 text-center font-bold text-red-600">{errors.username.message}</p>
             )}
             <Input
               placeholder="비밀번호 을 입력하세요"
@@ -66,7 +66,9 @@ export default function SignUpForm() {
               type="password"
               {...register('password', { required: '비밀번호는 필수입니다.' })}
             />
-            {errors.password && <p className="text-red-600">{errors.password.message}</p>}
+            {errors.password && (
+              <p className="py-2 text-center font-bold text-red-600">{errors.password.message}</p>
+            )}
 
             <select className="my-2 w-full" {...register('permission')}>
               <option value="USER">일반 사용자</option>
