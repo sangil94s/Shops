@@ -46,19 +46,21 @@ export default function Headers() {
             <DropdownMenuContent>
               {isAuthenticated && (
                 <>
-                  <DropdownMenuItem className="cursor-pointer" onClick={() => tempAlert()}>
-                    <NotepadText /> 마이 페이지
-                  </DropdownMenuItem>
-
-                  <DropdownMenuItem className="cursor-pointer" onClick={() => tempAlert()}>
-                    <NotepadText /> 관리자 페이지
-                  </DropdownMenuItem>
+                  <Link href={`/mypagek/${users?.nickname}`}>
+                    <DropdownMenuItem className="cursor-pointer">
+                      <NotepadText /> 마이 페이지
+                    </DropdownMenuItem>
+                  </Link>
                   <DropdownMenuItem className="cursor-pointer" onClick={() => tempAlert()}>
                     <ShoppingBasket /> 장바구니
                   </DropdownMenuItem>
                 </>
               )}
-
+              {users?.permission === 'ADMIN' && (
+                <DropdownMenuItem className="cursor-pointer">
+                  <NotepadText /> 관리자 페이지
+                </DropdownMenuItem>
+              )}
               <DropdownMenuItem className="cursor-pointer" onClick={() => router.push('/faq')}>
                 <Headset /> FAQ
               </DropdownMenuItem>
