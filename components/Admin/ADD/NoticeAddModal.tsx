@@ -17,36 +17,35 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 import { useAuthStore } from '@/app/util/Zustand/useAuthStore';
-// 관리자 전용 -FAQ 추가 모달 초안
+// 관리자 전용 - 공지 추가 모달 초안
 
-export default function FAQAddModal() {
+export default function NoticeAddModal() {
   const user = useAuthStore(state => state.user);
 
   return (
     <>
       <Dialog>
         {user?.permission === 'ADMIN' && (
-          <DialogTrigger className="m-4 cursor-pointer font-bold">FAQ 추가</DialogTrigger>
+          <DialogTrigger className="m-4 cursor-pointer font-bold">공지 추가</DialogTrigger>
         )}
         <DialogContent>
           <DialogHeader>
-            <DialogTitle className="text-center">관리자 전용 - FAQ 추가</DialogTitle>
+            <DialogTitle className="text-center">관리자 전용 - 공지 추가</DialogTitle>
           </DialogHeader>
 
           <form className="w-full">
-            <Input placeholder="상품 명을 입력하시오" />
+            <Input placeholder="공지 명을 입력하시오" />
             <p className="py-2 text-center font-bold text-red-600">입력 누락시 나오는 텍스트</p>
             <Input placeholder="설명을 입력하세요" />
             <p className="py-2 text-center font-bold text-red-600">입력 누락시 나오는 텍스트</p>
             <Select>
               <SelectTrigger className="my-2 w-full">
-                <SelectValue placeholder="FAQ 카테고리 선택하세요" />
+                <SelectValue placeholder="공지 카테고리 선택하세요" />
               </SelectTrigger>
               <SelectContent>
+                <SelectItem value="사이트이용">사이트 이용</SelectItem>
                 <SelectItem value="배송">배송</SelectItem>
                 <SelectItem value="결제">결제</SelectItem>
-                <SelectItem value="취소환불">취소/환불</SelectItem>
-                <SelectItem value="회원정보">회원정보</SelectItem>
                 <SelectItem value="기타">기타</SelectItem>
               </SelectContent>
             </Select>

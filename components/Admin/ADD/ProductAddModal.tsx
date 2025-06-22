@@ -49,7 +49,14 @@ export default function ProductAddModal() {
                 <SelectItem value="system">System</SelectItem>
               </SelectContent>
             </Select>
-            <Button className="w-full">등록</Button>
+            <div className="my-2">
+              <label htmlFor="picture">첨부할 이미지를 선택하시오</label>
+              <Input id="picture" type="file" />
+            </div>
+            <Button className="w-full" disabled>
+              등록
+            </Button>
+            {/* 필수값 다 있으면 disabled 풀도록 */}
           </form>
         </DialogContent>
       </Dialog>

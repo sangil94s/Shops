@@ -18,7 +18,9 @@ export default function Home() {
         <ProductCard />
         <ProductCard />
       </div>
-      <ProductAddModal />
+      <div className="m-auto flex items-center justify-center">
+        <ProductAddModal />
+      </div>
     </>
   );
 }

@@ -19,8 +19,9 @@
 [백엔드 레포 - 진행중](https://github.com/sangil94s/Shops-BE)
 
 ### Tech Skill
+
 - Frontend : Next.js (App Router), Typescript, Tailwindcss,Tanstack/react-query , React-Hook-Form
-- Backend : Nest.js ,Prisma, Supabase (추후 추가 예정) 
+- Backend : Nest.js ,Prisma, Supabase (추후 추가 예정)
 
 ### 참고 - 이미지 관련
 
