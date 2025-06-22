@@ -1,6 +1,14 @@
 // Header
 'use client';
-import { AlignJustify, ShoppingBasket, Headset, LogIn, LogOut, NotepadText } from 'lucide-react';
+import {
+  AlignJustify,
+  CircleAlert,
+  ShoppingBasket,
+  Headset,
+  LogIn,
+  LogOut,
+  NotepadText,
+} from 'lucide-react';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -28,7 +36,7 @@ export default function Headers() {
   };
   return (
     <>
-      <header className="my-1 flex h-10 w-full flex-row justify-between border-b-2 border-slate-300">
+      <header className="my-1 flex h-10 w-full flex-row justify-between">
         <Link href="/" className="p-1 text-xl font-bold">
           Logo
         </Link>
@@ -63,6 +71,9 @@ export default function Headers() {
               )}
               <DropdownMenuItem className="cursor-pointer" onClick={() => router.push('/faq')}>
                 <Headset /> FAQ
+              </DropdownMenuItem>
+              <DropdownMenuItem className="cursor-pointer" onClick={() => router.push('/notices')}>
+                <CircleAlert /> 공지사항
               </DropdownMenuItem>
               {!isAuthenticated ? (
                 <DropdownMenuItem className="cursor-pointer" onClick={() => router.push('/login')}>
