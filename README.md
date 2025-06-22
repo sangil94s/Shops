@@ -5,10 +5,10 @@
 ## 목표
 
 - 운동 관련 상품을 판매한다는 가상의 목표의 쇼핑몰을 구현 [러닝/웨이트/축구 등등.]
-- 백엔드의 경우 Next.js가 아닌 Nest.js 학습 겸 진행
+- 백엔드의 경우 Next.js가 아닌 Nest.js + Prisma + Supabase 학습 겸 진행
 - 결제의 경우, 결제 모듈을 호출 정도까지를 목표로 함.
 
-- 테스트 코드를 사용하는걸 목표로 한다.
+- 테스트 코드를 사용하는걸 목표로 한다. (대부분 기능 구현 후 실시)
 
 ## 배포
 
@@ -17,6 +17,10 @@
 - DB 한정 사용 : Supabase
 
 [백엔드 레포 - 진행중](https://github.com/sangil94s/Shops-BE)
+
+### Tech Skill
+- Frontend : Next.js (App Router), Typescript, Tailwindcss,Tanstack/react-query , React-Hook-Form
+- Backend : Nest.js ,Prisma, Supabase (추후 추가 예정) 
 
 ### 참고 - 이미지 관련
 
