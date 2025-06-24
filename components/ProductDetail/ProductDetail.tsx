@@ -40,6 +40,7 @@ export default function ProductDetail() {
               <ShoppingBasket />
               장바구니 담기
             </Button>
+            {/* value가 1 미만이면 담기 버튼 비 활성화? */}
           </div>
         </section>
       </div>

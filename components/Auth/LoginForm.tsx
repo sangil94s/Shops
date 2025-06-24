@@ -8,6 +8,7 @@ import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import { useAuthStore } from '@/app/util/Zustand/useAuthStore';
 import { LoginFormValues } from '@/types/TypeInfomation';
+import { LogIn } from 'lucide-react';
 
 export default function LoginForm() {
   const router = useRouter();
@@ -72,7 +73,7 @@ export default function LoginForm() {
               type="submit"
               className={`w-full cursor-pointer font-bold ${isFormValid ? 'text-blue-500' : 'text-transparent'}`}
             >
-              로그인
+              <LogIn /> 로그인
             </Button>
           </CardFooter>
           <h4

@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
+import { Plus } from 'lucide-react';
 
 // 리뷰 작성하는 부분
 
@@ -29,8 +30,9 @@ export default function ReviewAddForm() {
             </div>
 
             <Button variant="ghost" type="submit" className="w-full cursor-pointer font-bold">
-              리뷰 등록하기
+              <Plus /> 리뷰 등록하기
             </Button>
+            {/* 이 부분도 리뷰 제목과 내용이 없다면 비 활성화? */}
           </form>
         </CardContent>
       </Card>

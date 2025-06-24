@@ -7,6 +7,7 @@ import { Input } from '../ui/input';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import { SignUpValues } from '@/types/TypeInfomation';
+import { Plus } from 'lucide-react';
 
 export default function SignUpForm() {
   const router = useRouter();
@@ -81,7 +82,7 @@ export default function SignUpForm() {
               type="submit"
               className={`w-full cursor-pointer font-bold ${isFormValid ? 'text-blue-500' : 'text-transparent'}`}
             >
-              회원가입
+              <Plus /> 회원가입
             </Button>
           </CardFooter>
           <h4

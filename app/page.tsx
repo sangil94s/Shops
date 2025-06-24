@@ -2,6 +2,7 @@ import ProductAddModal from '@/components/Admin/ADD/ProductAddModal';
 import MainCarousel from '@/components/ETC/MainCarousel';
 import ProductCard from '@/components/Product/Card/ProductCard';
 import ProductFilter from '@/components/Product/Filter/ProductFilter';
+import ProductSearch from '@/components/Product/Search/ProductSearch';
 import ProductSort from '@/components/Product/Sort/ProductSort';
 
 export default function Home() {
@@ -17,6 +18,9 @@ export default function Home() {
         <ProductCard />
         <ProductCard />
         <ProductCard />
+      </div>
+      <div>
+        <ProductSearch />
       </div>
       <div className="m-auto flex items-center justify-center">
         <ProductAddModal />
