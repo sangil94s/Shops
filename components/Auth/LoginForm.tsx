@@ -27,7 +27,7 @@ export default function LoginForm() {
 
   const onSubmit = async (data: LoginFormValues) => {
     try {
-      const res = await axios.post('https://shops-be.onrender.com/users/login', data);
+      const res = await axios.post(`${process.env.NEXT_PUBLIC_URL}/users/login`, data);
       const { accessToken, user } = res.data;
 
       login({ accessToken, user });

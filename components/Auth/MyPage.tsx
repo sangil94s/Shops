@@ -11,7 +11,7 @@ import dayjs from 'dayjs';
 export default function MyPage() {
   const params = useParams();
   const fetchMypages = () =>
-    axios.get(`https://shops-be.onrender.com/users/${params?.nickname}`).then(({ data }) => data);
+    axios.get(`${process.env.NEXT_PUBLIC_URL}/users/${params?.nickname}`).then(({ data }) => data);
   const { data, isError, error, isLoading } = useQuery({
     queryKey: ['MyPages'],
     queryFn: fetchMypages,

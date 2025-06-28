@@ -25,7 +25,7 @@ export default function SignUpForm() {
 
   const onSubmit = async (data: SignUpValues) => {
     try {
-      await axios.post('https://shops-be.onrender.com/users', data);
+      await axios.post(`${process.env.NEXT_PUBLIC_URL}/users`, data);
       alert('회원가입 완료! 로그인해주세요.');
       router.push('/login');
     } catch (err: any) {
