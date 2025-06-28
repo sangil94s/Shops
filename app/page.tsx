@@ -8,6 +8,7 @@ import ProductSort from '@/components/Product/Sort/ProductSort';
 export default function Home() {
   return (
     <>
+      <h1 className="py-4 text-center font-bold text-red-600">해당 프로젝트는 진행 중 입니다!</h1>
       <MainCarousel />
       <div className="flex flex-row items-center justify-center gap-2">
         <ProductFilter />

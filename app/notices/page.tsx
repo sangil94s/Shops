@@ -10,7 +10,7 @@ export const metadata = {
 export default function page() {
   return (
     <>
-      <h1 className="p-2 text-center text-xl font-bold">공지 사항 관련 페이지 입니다.</h1>
+      <h1 className="p-2 text-center text-xl font-bold">공지 사항 페이지 입니다.</h1>
       <NoticeFilter />
       <Nodata />
       <div className="m-auto flex items-center justify-center">
