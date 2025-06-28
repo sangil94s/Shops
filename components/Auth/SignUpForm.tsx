@@ -42,7 +42,7 @@ export default function SignUpForm() {
       >
         <Card className="w-full max-w-md">
           <CardHeader>
-            <CardTitle className="text-center text-2xl font-bold">회원가입 페이지</CardTitle>
+            <CardTitle className="text-center text-2xl font-bold">Gym Shop</CardTitle>
           </CardHeader>
           <CardContent>
             <Input
