@@ -4,8 +4,14 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '.
 import { ShoppingBasket } from 'lucide-react';
 
 // 상품에 대한 정보를 보여주는 목적의 컴포넌트 입니다.
-
-export default function ProductDetail() {
+interface ProductDetailProps {
+  product: {
+    id: number;
+    title: string;
+    body: string;
+  };
+}
+export default function ProductDetail({ product }: ProductDetailProps) {
   return (
     <>
       <div className="m-auto flex h-max w-11/12 flex-col items-center justify-between lg:flex-row">
@@ -20,7 +26,7 @@ export default function ProductDetail() {
         </section>
 
         <section className="w-full">
-          <h1 className="py-4 text-center font-bold">상품 제목 배치 지역</h1>
+          <h1 className="py-4 text-center font-bold">제목 : {product?.title}</h1>
           <p className="py-4 text-center font-bold">상품 간단 정보 배치 지역: </p>
           <p className="py-4 text-center font-bold">상품 가격 배치 지역: </p>
           <div className="flex flex-col items-center justify-center">
