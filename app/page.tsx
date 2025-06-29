@@ -16,9 +16,6 @@ export default function Home() {
       </div>
       <div className="m-auto grid w-10/12 grid-cols-2 gap-2 lg:w-7/12 lg:grid-cols-4">
         <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
       </div>
       <div>
         <ProductSearch />

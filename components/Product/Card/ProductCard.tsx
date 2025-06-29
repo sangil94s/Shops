@@ -22,7 +22,7 @@ export default async function ProductCard() {
     <>
       {getProductData &&
         getProductData.map((item: any) => (
-          <Link href={`/detail/${item.id}`}>
+          <Link href={`/detail/${item.id}`} key={item.id}>
             <Card className="m-1 transition-transform duration-200 ease-in-out hover:scale-105">
               <CardHeader>
                 <Image

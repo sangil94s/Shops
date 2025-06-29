@@ -1,6 +1,7 @@
 import NoticeAddModal from '@/components/Admin/ADD/NoticeAddModal';
 import Nodata from '@/components/ETC/Nodata';
 import NoticeFilter from '@/components/Notice/NoticeFilter';
+import NoticeList from '@/components/Notice/NoticeList';
 
 // 공지사항 관련
 
@@ -13,6 +14,8 @@ export default function page() {
       <h1 className="p-2 text-center text-xl font-bold">공지 사항 페이지 입니다.</h1>
       <NoticeFilter />
       <Nodata />
+
+      <NoticeList />
       <div className="m-auto flex items-center justify-center">
         <NoticeAddModal />
       </div>

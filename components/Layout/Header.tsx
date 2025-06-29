@@ -38,7 +38,7 @@ export default function Headers() {
     <>
       <header className="my-1 flex h-10 w-full flex-row justify-between">
         <Link href="/" className="p-1 text-xl font-bold">
-          Logo
+          Gym Shop
         </Link>
         {/* 제목 뭐하지? */}
         <section className="flex">
