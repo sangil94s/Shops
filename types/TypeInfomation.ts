@@ -8,6 +8,15 @@ export interface FAQListTypes {
   createDate: string;
 } // FAQ List 에서 사용합니다.
 
+export interface NoticeListTypes {
+  id: number;
+  adminId: number;
+  createDate?: string;
+  updateDate?: string;
+  category: string;
+  description: string;
+  title: string;
+} // NoticeList.tsx에서 사용합니다
 export interface LoginFormValues {
   username: string;
   password: string;

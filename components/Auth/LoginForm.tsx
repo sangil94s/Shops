@@ -17,7 +17,7 @@ export default function LoginForm() {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors, isLoading },
     watch,
   } = useForm<LoginFormValues>();
 
@@ -33,9 +33,13 @@ export default function LoginForm() {
       login({ accessToken, user });
       alert('로그인 완료');
       router.push('/');
-    } catch (err: any) {
-      console.error(err);
-      alert(err?.response?.data?.message || '로그인 실패');
+    } catch (err: unknown) {
+      if (axios.isAxiosError(err)) {
+        alert(err?.response?.data?.message || '로그인 실패');
+      } else {
+        console.error(err);
+        alert('에러 발생');
+      }
     }
   };
   return (
@@ -72,8 +76,15 @@ export default function LoginForm() {
               variant="ghost"
               type="submit"
               className={`w-full cursor-pointer font-bold ${isFormValid ? 'text-blue-500' : 'text-transparent'}`}
+              disabled={!isFormValid || isLoading}
             >
-              <LogIn /> 로그인
+              {isLoading ? (
+                '로그인 중...'
+              ) : (
+                <>
+                  <LogIn /> 로그인
+                </>
+              )}
             </Button>
           </CardFooter>
           <h4

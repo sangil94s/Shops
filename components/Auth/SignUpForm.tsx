@@ -15,7 +15,7 @@ export default function SignUpForm() {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors, isLoading },
     watch,
   } = useForm<SignUpValues>();
   const nickname = watch('nickname', '');
@@ -28,9 +28,13 @@ export default function SignUpForm() {
       await axios.post(`${process.env.NEXT_PUBLIC_URL}/users`, data);
       alert('회원가입 완료! 로그인해주세요.');
       router.push('/login');
-    } catch (err: any) {
-      console.error(err);
-      alert(err?.response?.data?.message || '회원가입 실패');
+    } catch (err: unknown) {
+      if (axios.isAxiosError(err)) {
+        alert(err?.response?.data?.message || '회원가입 실패');
+      } else {
+        console.error(err);
+        alert('에러 발생');
+      }
     }
   };
 
@@ -81,8 +85,15 @@ export default function SignUpForm() {
               variant="ghost"
               type="submit"
               className={`w-full cursor-pointer font-bold ${isFormValid ? 'text-blue-500' : 'text-transparent'}`}
+              disabled={!isFormValid || isLoading}
             >
-              <Plus /> 회원가입
+              {isLoading ? (
+                '회원가입 중...'
+              ) : (
+                <>
+                  <Plus /> 회원가입
+                </>
+              )}
             </Button>
           </CardFooter>
           <h4
