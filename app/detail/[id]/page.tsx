@@ -2,7 +2,6 @@ import ProductDetail from '@/components/ProductDetail/ProductDetail';
 import ProductDetailReview from '@/components/ProductDetail/ProductDetailReview/ProductDetailReview';
 import ReviewAddForm from '@/components/ProductDetail/ProductDetailReview/ReviewAddForm';
 
-
 async function getProductDetail(id: string) {
   const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`, {
     cache: 'no-store',
@@ -12,7 +11,6 @@ async function getProductDetail(id: string) {
 
   return res.json();
 }
-
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
