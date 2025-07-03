@@ -2,6 +2,7 @@
 'use client';
 import {
   AlignJustify,
+  Bell,
   CircleAlert,
   ShoppingBasket,
   Headset,
@@ -47,6 +48,8 @@ export default function Headers() {
               <p className="mx-4 my-1 font-bold text-blue-600">{users?.nickname}님 </p>
             )}
           </div>
+          <Bell className="m-2" />
+          {/* Bell 아이콘은 추후 사용 예정 */}
           <DropdownMenu>
             <DropdownMenuTrigger>
               <AlignJustify className="m-1 cursor-pointer" />

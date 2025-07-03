@@ -16,9 +16,14 @@ async function getNoticeFatchDatas() {
 
 export default async function NoticeList() {
   const getNoticeData = await getNoticeFatchDatas();
+
   return (
     <>
       {getNoticeData.length === 0 && <Nodata />}
+
+      {getNoticeData.length >= 1 && (
+        <p className="py-2 text-center font-bold">공지사항 : {getNoticeData.length}개</p>
+      )}
       <Table className="text-center">
         <TableHeader>
           <TableRow>

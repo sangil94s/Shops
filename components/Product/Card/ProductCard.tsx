@@ -44,6 +44,9 @@ export default async function ProductCard() {
                 <CardDescription className="py-2 text-center text-sm lg:text-base">
                   상품 가격: {item.id}
                 </CardDescription>
+                <CardDescription className="py-2 text-center text-sm line-through lg:text-base">
+                  상품 구매 가능
+                </CardDescription>
               </CardHeader>
             </Card>
           </Link>

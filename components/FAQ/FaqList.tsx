@@ -17,6 +17,10 @@ export default async function FaqList() {
   return (
     <>
       {getFAQData.length === 0 && <Nodata />}
+      {getFAQData.length >= 1 && (
+        <p className="py-2 text-center font-bold">FAQ : {getFAQData.length}개</p>
+      )}
+
       {getFAQData.length >= 1 &&
         getFAQData.map((item: FAQListTypes) => (
           <div className="m-auto w-10/12" key={item.id}>
